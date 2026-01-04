@@ -1,210 +1,314 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <title>Etsy Danışmanlık</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 16px 36px;
+      background: #111;
+      color: white;
+      border-radius: 50px;
+      font-weight: bold;
+    }
+
+    /* TRUST */
+    .trust {
+      background: white;
+      padding: 80px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .trust-box {
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .trust-box h3 {
+      margin-bottom: 10px;
+      color: #25D366;
+    }
+
+    /* PACKAGES */
+    .packages {
+      padding: 80px 0;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .package {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .package h3 {
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 26px;
+      color: #25D366;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    /* PROCESS */
+    .process {
+      background: #111;
+      color: white;
+      padding: 80px 0;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .step {
+      background: #1c1c1c;
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    .step-no {
+      width: 40px;
+      height: 40px;
+      background: #25D366;
+      color: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #25D366;
+      color: black;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta a {
+      background: #111;
+      color: white;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <p class="badge">Etsy Danışmanlık</p>
-    <h1>Etsy Mağazanı <span>Büyütelim</span></h1>
-    <p class="sub">
-      Gerçek mağaza verileriyle birebir danışmanlık.
-      SEO + reklam + dönüşüm optimizasyonu ile satışa giden sistemi kuruyoruz.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#paketler" class="btn-primary">Paketleri Gör</a>
-      <a
-        href="https://wa.me/905368121022?text=Merhaba,%20Etsy%20danışmanlık%20paketleri%20hakkında%20bilgi%20almak%20istiyorum."
-        class="btn-ghost"
-        target="_blank"
-      >WhatsApp’tan Yaz</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Etsy Mağazanı Büyütmek İster misin?</h1>
+      <p>Gerçek mağaza deneyimi ile birebir Etsy danışmanlığı</p>
+      <a href="#paketler" class="btn">Paketleri Gör</a>
     </div>
+  </section>
 
-    <div class="trust-row">
-      <div class="trust-item">✔️ Aktif Etsy Satıcısı</div>
-      <div class="trust-item">✔️ Kopya bilgi yok</div>
-      <div class="trust-item">✔️ Birebir WhatsApp destek</div>
-      <div class="trust-item">✔️ Net yol haritası</div>
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="container">
+      <h2>Neden Bana Güvenmelisin?</h2>
+
+      <div class="trust-grid">
+        <div class="trust-box">
+          <h3>Gerçek Satıcı</h3>
+          <p>Kendi Etsy mağazalarım üzerinden çalışıyorum.</p>
+        </div>
+
+        <div class="trust-box">
+          <h3>Kopya Bilgi Yok</h3>
+          <p>Hazır PDF değil, sana özel strateji.</p>
+        </div>
+
+        <div class="trust-box">
+          <h3>WhatsApp Destek</h3>
+          <p>Robot değil, direkt benimle iletişim.</p>
+        </div>
+
+        <div class="trust-box">
+          <h3>Net Yol Haritası</h3>
+          <p>Ne yapacağını adım adım biliyorsun.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PACKAGES -->
-<section class="packages" id="paketler">
-  <div class="container">
-    <div class="section-head">
+  <!-- PACKAGES -->
+  <section class="packages" id="paketler">
+    <div class="container">
       <h2>Danışmanlık Paketleri</h2>
-      <p>Hedefine göre seç: ilk adım / büyütme / hızlandırma</p>
-    </div>
 
-    <div class="package-grid">
+      <div class="packages-grid">
+        <div class="package">
+          <h3>Başlangıç</h3>
+          <p>Mağaza analizi + yol haritası</p>
+          <div class="price">₺2.500</div>
+        </div>
 
-      <div class="card">
-        <h3>Başlangıç</h3>
-        <p class="desc">
-          “Neden satış yok?” sorusuna net cevap.
-          60 dk analiz + uygulanabilir aksiyon planı.
-        </p>
+        <div class="package">
+          <h3>Profesyonel</h3>
+          <p>SEO + reklam + dönüşüm</p>
+          <div class="price">₺4.000</div>
+        </div>
 
-        <ul class="list">
-          <li>Mağaza + ürün analizi</li>
-          <li>Hızlı kazanım önerileri</li>
-          <li>Fiyat / kategori / vitrin kontrolü</li>
-        </ul>
-
-        <div class="price">₺2.500</div>
-
-        <a
-          class="btn-secondary"
-          href="https://wa.me/905368121022?text=Merhaba,%20Başlangıç%20paketi%20hakkında%20bilgi%20almak%20istiyorum."
-          target="_blank"
-        >WhatsApp’tan Yaz</a>
-      </div>
-
-      <div class="card featured">
-        <div class="tag">⭐ En Çok Tercih Edilen</div>
-        <h3>Profesyonel</h3>
-        <p class="desc">
-          Satış getiren SEO, doğru reklam ve dönüşüm optimizasyonu.
-          “En mantıklı seçim”.
-        </p>
-
-        <ul class="list">
-          <li>SEO & anahtar kelime planı</li>
-          <li>Etsy Ads optimizasyonu</li>
-          <li>Liste başlık / açıklama revizyonu</li>
-          <li>Dönüşüm artıran vitrin ayarları</li>
-        </ul>
-
-        <div class="price">₺4.000</div>
-
-        <a
-          class="btn-primary"
-          href="https://wa.me/905368121022?text=Merhaba,%20Profesyonel%20paketi%20seçmek%20istiyorum.%20Mağaza%20linkim:%20"
-          target="_blank"
-        >En Mantıklı Seçim</a>
-      </div>
-
-      <div class="card">
-        <h3>Premium</h3>
-        <p class="desc">
-          Hızlı sonuç isteyenler için.
-          1 ay birebir WhatsApp destek + haftalık takip.
-        </p>
-
-        <ul class="list">
-          <li>Profesyonel paketin tamamı</li>
-          <li>Haftalık rapor & kontrol</li>
-          <li>Anlık WhatsApp destek</li>
-          <li>Strateji güncellemeleri</li>
-        </ul>
-
-        <div class="price">₺10.000</div>
-
-        <a
-          class="btn-secondary"
-          href="https://wa.me/905368121022?text=Merhaba,%20Premium%20paket%20hakkında%20bilgi%20almak%20istiyorum."
-          target="_blank"
-        >Hemen Başla</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- FIT -->
-<section class="fit">
-  <div class="container">
-    <div class="section-head">
-      <h2>Bu Danışmanlık Kimler İçin?</h2>
-      <p>Uygunluk kriteri güven verir — yanlış müşteriyi elemek satışını artırır.</p>
-    </div>
-
-    <div class="fit-grid">
-      <div class="card soft">
-        <h3>✅ Uygun</h3>
-        <ul class="list">
-          <li>Satış yapmak isteyen Etsy satıcıları</li>
-          <li>Reklam verip sonuç alamayanlar</li>
-          <li>Mağazasını büyütmek isteyenler</li>
-        </ul>
-      </div>
-
-      <div class="card soft">
-        <h3>❌ Uygun Değil</h3>
-        <ul class="list">
-          <li>Hiç emek vermek istemeyenler</li>
-          <li>“Bir günde zengin olayım” diyenler</li>
-          <li>Tavsiyeleri uygulamayanlar</li>
-        </ul>
+        <div class="package">
+          <h3>Premium</h3>
+          <p>1 ay birebir destek</p>
+          <div class="price">₺10.000</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROCESS -->
-<section class="process">
-  <div class="container">
-    <div class="section-head">
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
       <h2>Nasıl Çalışıyoruz?</h2>
-      <p>4 adımda net sistem: analiz → plan → uygulama → takip</p>
-    </div>
 
-    <div class="process-grid">
-      <div class="step">
-        <div class="step-no">1</div>
-        <div class="step-title">Analiz</div>
-        <div class="step-text">Mağazanı, ürünlerini, SEO ve fiyatlamanı incelerim.</div>
-      </div>
+      <div class="process-grid">
+        <div class="step">
+          <div class="step-no">1</div>
+          <p>Mağazanı analiz ederim</p>
+        </div>
 
-      <div class="step">
-        <div class="step-no">2</div>
-        <div class="step-title">Sorun Tespiti</div>
-        <div class="step-text">Neyi düzelteceğimizi netleştirip öncelik çıkarırım.</div>
-      </div>
+        <div class="step">
+          <div class="step-no">2</div>
+          <p>Sorunları tespit ederim</p>
+        </div>
 
-      <div class="step">
-        <div class="step-no">3</div>
-        <div class="step-title">Yol Haritası</div>
-        <div class="step-text">Uygulanabilir adımları sıraya koyarım.</div>
-      </div>
+        <div class="step">
+          <div class="step-no">3</div>
+          <p>Yol haritası çıkarırım</p>
+        </div>
 
-      <div class="step">
-        <div class="step-no">4</div>
-        <div class="step-title">Takip</div>
-        <div class="step-text">Seçtiğin pakete göre uygulama ve iyileştirme yaparız.</div>
+        <div class="step">
+          <div class="step-no">4</div>
+          <p>Takip ve iyileştirme yaparız</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FINAL CTA -->
-<section class="cta">
-  <div class="container">
-    <h2>Hazırsan Başlayalım</h2>
-    <p>Hemen WhatsApp’tan yaz. Mağaza linkini gönder, ilk incelemeyi yapalım.</p>
-    <a
-      href="https://wa.me/905368121022?text=Merhaba,%20Etsy%20danışmanlık%20için%20mağaza%20linkim:%20"
-      class="btn-primary big"
-      target="_blank"
-    >WhatsApp’tan Yaz</a>
-  </div>
-</section>
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Hazırsan Başlayalım</h2>
+      <a href="https://wa.me/905368121022" target="_blank">WhatsApp’tan Yaz</a>
+    </div>
+  </section>
 
-<!-- FLOAT WHATSAPP -->
-<a
-  href="https://wa.me/905368121022?text=Merhaba,%20Etsy%20danışmanlık%20hakkında%20bilgi%20almak%20istiyorum."
-  class="whatsapp-float"
-  target="_blank"
->WhatsApp</a>
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/905368121022" class="whatsapp" target="_blank">
+    WhatsApp
+  </a>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Etsy Danışmanlık – Tüm Hakları Saklıdır
+  </footer>
 
 </body>
 </html>
