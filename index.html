@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Etsy Danışmanlık</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Etsy Danışmanlık</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Etsy Mağazanı Büyütmek İster misin?</h1>
-<p>Etsy danışmanlık hizmeti</p>
+<!-- HERO -->
+<section class="hero">
+  <h1>Etsy Mağazanı Büyütmek İster misin?</h1>
+  <p>Gerçek mağaza verileriyle birebir Etsy danışmanlığı</p>
+  <a href="#paketler" class="cta">Paketleri Gör</a>
+</section>
 
-<a href="#paketler">
-    Paketleri Gör 
-</a>
-<hr>
+<!-- PAKETLER -->
+<section class="packages" id="paketler">
+  <h2>Danışmanlık Paketleri</h2>
 
-<h2 id="paketler">Danışmanlık Paketleri</h2>
+  <div class="package-list">
+    <div class="package">
+      <h3>Başlangıç Paketi</h3>
+      <p>Etsy mağaza analizi + yol haritası</p>
+      <strong>₺2.500</strong>
+    </div>
 
-<div class="package">
-    <h3>Başlangıç Paketi</h3>
-    <p>Etsy mağaza analizi + yol haritası</p>
-    <strong>₺2.500</strong>
-</div>
+    <div class="package">
+      <h3>Profesyonel Paket</h3>
+      <p>SEO + reklam + dönüşüm optimizasyonu</p>
+      <strong>₺4.000</strong>
+    </div>
 
-<div class="package">
-    <h3>Profesyonel Paket</h3>
-    <p>SEO + reklam + dönüşüm optimizasyonu</p>
-    <strong>₺4.000</strong>
-</div>
+    <div class="package">
+      <h3>Premium Paket</h3>
+      <p>1 ay birebir destek + raporlama</p>
+      <strong>₺10.000</strong>
+    </div>
+  </div>
+</section>
 
-<div class="package">
-    <h3>Premium Paket</h3>
-    <p>1 ay birebir destek + raporlama</p>
-    <strong>₺10.000</strong>
-</div>
-<hr>
+<!-- NEDEN BEN -->
+<section class="why">
+  <h2>Neden Ben?</h2>
+  <ul>
+    <li>✔️ Aktif Etsy satıcısıyım</li>
+    <li>✔️ Gerçek mağaza verileriyle çalışırım</li>
+    <li>✔️ Kopya değil, sana özel strateji</li>
+    <li>✔️ WhatsApp üzerinden birebir destek</li>
+  </ul>
+</section>
 
-<h2>Neden Ben?</h2>
+<!-- NASIL ÇALIŞIYORUZ -->
+<section class="process">
+  <h2>Nasıl Çalışıyoruz?</h2>
+  <ol>
+    <li>Mağazanı detaylı analiz ederim</li>
+    <li>Sorunları net şekilde tespit ederim</li>
+    <li>Sana özel yol haritası çıkarırım</li>
+    <li>Satışa giden sistemi kurarız</li>
+  </ol>
+</section>
 
-<div class="trust">
-    <p>✔️ Aktif Etsy satıcısıyım</p>
-    <p>✔️ Gerçek mağazalar üzerinden deneyim</p>
-    <p>✔️ Kopya bilgi değil, birebir analiz</p>
-    <p>✔️ Danışanlara özel yol haritası</p>
-</div>
-<script>
-document.getElementById("paketBtn").addEventListener("click", function(e) {
-    e.preventDefault();
+<!-- CTA -->
+<section class="contact">
+  <h2>Hazırsan Başlayalım</h2>
+  <a href="https://wa.me/905368121022" class="cta">WhatsApp’tan Yaz</a>
+</section>
 
-    document.getElementById("paketler").scrollIntoView({
-        behavior: "smooth"
-    });
-});
-</script>
-
-<a
-  href="https://wa.me/905368121022"
-  class="whatsapp-button"
-  target="_blank"
->
-  WhatsApp’tan Yaz
+<!-- SABİT WHATSAPP -->
+<a href="https://wa.me/905368121022" class="whatsapp-button" target="_blank">
+  WhatsApp
 </a>
 
 </body>
