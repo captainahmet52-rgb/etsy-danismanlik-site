@@ -6,103 +6,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      background: #f4f7fb;
       color: #1f2937;
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .container {
-      max-width: 1150px;
+      max-width: 1200px;
       margin: auto;
       padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .sub {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 50px;
     }
 
     /* HERO */
     .hero {
       background: linear-gradient(135deg, #1a73e8, #4f9cff);
       color: white;
-      padding: 110px 0 90px;
+      padding: 120px 0 100px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 46px;
+      font-size: 48px;
       margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 19px;
-      opacity: 0.95;
-      max-width: 720px;
+      font-size: 20px;
+      max-width: 750px;
       margin: auto;
+      opacity: 0.95;
     }
 
-    .hero a {
+    .hero .btn {
       display: inline-block;
       margin-top: 35px;
-      padding: 16px 38px;
+      padding: 18px 40px;
       background: #111827;
       color: white;
       border-radius: 50px;
       font-weight: bold;
-      text-decoration: none;
     }
 
     /* TRUST */
     .trust {
       background: white;
-      padding: 60px 0;
+      padding: 80px 0;
     }
 
     .trust-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      text-align: center;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
 
-    .trust-item {
-      font-weight: 600;
+    .trust-card {
+      background: #f4f7fb;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .trust-card h3 {
       color: #1a73e8;
+      margin-bottom: 10px;
     }
 
     /* PACKAGES */
     .packages {
-      padding: 90px 0;
-    }
-
-    .packages h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-
-    .packages p.sub {
-      text-align: center;
-      color: #6b7280;
-      margin-bottom: 50px;
+      padding: 100px 0;
     }
 
     .package-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
     }
 
     .package {
       background: white;
-      border-radius: 18px;
       padding: 35px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
     }
 
     .package.featured {
       border: 2px solid #1a73e8;
-      transform: translateY(-8px);
+      background: linear-gradient(180deg, #ffffff, #eef5ff);
+      transform: translateY(-10px);
     }
 
     .package h3 {
@@ -131,7 +148,7 @@
     }
 
     .price {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
       color: #1a73e8;
       margin-bottom: 20px;
@@ -139,12 +156,11 @@
 
     .package a {
       display: inline-block;
-      padding: 14px 28px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
+      padding: 14px 30px;
       background: #1a73e8;
       color: white;
+      border-radius: 50px;
+      font-weight: bold;
     }
 
     /* PROCESS */
@@ -153,26 +169,45 @@
       padding: 90px 0;
     }
 
-    .process h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
     .process-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
+      margin-top: 40px;
     }
 
     .step {
-      background: #f5f7fa;
+      background: #f4f7fb;
       padding: 30px;
-      border-radius: 14px;
+      border-radius: 16px;
     }
 
     .step span {
-      font-weight: bold;
       color: #1a73e8;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    /* DONE FOR YOU */
+    .done {
+      background: #111827;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .done p {
+      max-width: 750px;
+      margin: 20px auto 40px;
+      opacity: 0.9;
+    }
+
+    .done a {
+      background: #1a73e8;
+      padding: 18px 42px;
+      border-radius: 50px;
+      font-weight: bold;
+      color: white;
     }
 
     /* CTA */
@@ -188,10 +223,9 @@
       margin-top: 25px;
       padding: 18px 42px;
       background: #111827;
-      color: white;
       border-radius: 50px;
       font-weight: bold;
-      text-decoration: none;
+      color: white;
     }
 
     /* WHATSAPP */
@@ -201,15 +235,23 @@
       bottom: 20px;
       background: #25D366;
       color: white;
-      padding: 14px 20px;
+      padding: 14px 22px;
       border-radius: 50px;
       font-weight: bold;
-      text-decoration: none;
       box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+    }
+
     @media (max-width: 600px) {
-      .hero h1 { font-size: 32px; }
+      .hero h1 { font-size: 34px; }
+      h2 { font-size: 28px; }
     }
   </style>
 </head>
@@ -220,18 +262,35 @@
 <section class="hero">
   <div class="container">
     <h1>Etsy Mağazanı Büyütelim</h1>
-    <p>SEO, reklam ve dönüşüm optimizasyonu ile satışa giden net bir sistem kuruyoruz.</p>
-    <a href="#paketler">Paketleri Gör</a>
+    <p>SEO, reklam ve dönüşüm optimizasyonu ile satış getiren net bir sistem kuruyoruz.</p>
+    <a href="#paketler" class="btn">Paketleri Gör</a>
   </div>
 </section>
 
 <!-- TRUST -->
 <section class="trust">
-  <div class="container trust-grid">
-    <div class="trust-item">✔️ Aktif Etsy Satıcısı</div>
-    <div class="trust-item">✔️ Gerçek Mağaza Verileri</div>
-    <div class="trust-item">✔️ Kopya Bilgi Yok</div>
-    <div class="trust-item">✔️ WhatsApp Birebir Destek</div>
+  <div class="container">
+    <h2>Neden Bana Güvenmelisin?</h2>
+    <p class="sub">Kopya bilgi değil, gerçek Etsy mağaza deneyimi</p>
+
+    <div class="trust-grid">
+      <div class="trust-card">
+        <h3>Gerçek Satıcı</h3>
+        <p>Aktif Etsy mağazaları üzerinden birebir deneyim.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Hazır Paket Yok</h3>
+        <p>Her mağazaya özel analiz ve strateji.</p>
+      </div>
+      <div class="trust-card">
+        <h3>WhatsApp Destek</h3>
+        <p>Robot değil, doğrudan benimle iletişim.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Sonuç Odaklı</h3>
+        <p>Ne yapacağını bilirsin, deneme-yanılma yok.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -242,14 +301,13 @@
     <p class="sub">Hedefine göre doğru paketi seç</p>
 
     <div class="package-grid">
-
       <div class="package">
         <h3>Başlangıç</h3>
-        <p class="desc">Satış yapmayan mağazalar için ilk adım</p>
+        <p class="desc">Satış yapmayan mağazalar için</p>
         <ul>
           <li>Mağaza & ürün analizi</li>
-          <li>Hızlı kazanım önerileri</li>
           <li>Fiyat & kategori kontrolü</li>
+          <li>Hızlı kazanım önerileri</li>
         </ul>
         <div class="price">₺2.500</div>
         <a href="https://wa.me/905368121022">WhatsApp’tan Yaz</a>
@@ -257,12 +315,12 @@
 
       <div class="package featured">
         <h3>Profesyonel</h3>
-        <p class="desc">En çok tercih edilen büyütme paketi</p>
+        <p class="desc">En çok tercih edilen paket</p>
         <ul>
           <li>SEO & anahtar kelime planı</li>
           <li>Etsy Ads optimizasyonu</li>
           <li>Liste başlık & açıklama revizyonu</li>
-          <li>Dönüşüm artıran vitrin ayarları</li>
+          <li>Dönüşüm artırma</li>
         </ul>
         <div class="price">₺4.000</div>
         <a href="https://wa.me/905368121022">En Mantıklı Seçim</a>
@@ -270,43 +328,16 @@
 
       <div class="package">
         <h3>Premium</h3>
-        <p class="desc">Hızlı sonuç isteyenler için</p>
+        <p class="desc">Birebir destek isteyenler</p>
         <ul>
           <li>Profesyonel paketin tamamı</li>
-          <li>1 ay birebir WhatsApp destek</li>
-          <li>Haftalık takip & raporlama</li>
+          <li>1 ay WhatsApp destek</li>
+          <li>Haftalık takip</li>
         </ul>
         <div class="price">₺10.000</div>
         <a href="https://wa.me/905368121022">Hemen Başla</a>
       </div>
-
-    </div><div class="package featured">
-  <h3>Tam Yönetim</h3>
-  <p class="desc">
-    Hiç uğraşmak istemeyenler için.
-    Etsy mağazanı baştan sona biz yönetiyoruz.
-  </p>
-
-  <ul>
-    <li>Mağaza kurulum & revizyon</li>
-    <li>Ürün listeleme & SEO</li>
-    <li>Etsy Ads yönetimi</li>
-    <li>Fiyatlandırma & kampanya</li>
-    <li>Haftalık raporlama</li>
-    <li>Sürekli optimizasyon</li>
-  </ul>
-
-  <div class="price">Aylık ₺20.000</div>
-
-  <a href="https://wa.me/905368121022">
-    Mağazayı Size Teslim Etmek İstiyorum
-  </a>
-
-  <p style="margin-top:12px; font-size:14px; color:#6b7280;">
-    *Sınırlı sayıda mağaza kabul edilir.
-  </p>
-</div>
-
+    </div>
   </div>
 </section>
 
@@ -319,8 +350,22 @@
       <div class="step"><span>1.</span> Mağazanı analiz ederim</div>
       <div class="step"><span>2.</span> Sorunları netleştiririm</div>
       <div class="step"><span>3.</span> Yol haritası çıkarırım</div>
-      <div class="step"><span>4.</span> Takip ve iyileştirme yaparız</div>
+      <div class="step"><span>4.</span> Takip & iyileştirme</div>
     </div>
+  </div>
+</section>
+
+<!-- DONE FOR YOU -->
+<section class="done">
+  <div class="container">
+    <h2>Hiç Uğraşmak İstemeyenler İçin</h2>
+    <p>
+      Etsy mağazanı tamamen bize teslim et.
+      Kurulumdan reklama, SEO’dan yönetime kadar her şeyi biz yapalım.
+    </p>
+    <a href="https://wa.me/905368121022">
+      Mağazayı Size Teslim Etmek İstiyorum
+    </a>
   </div>
 </section>
 
@@ -333,6 +378,10 @@
 </section>
 
 <a href="https://wa.me/905368121022" class="whatsapp">WhatsApp</a>
+
+<footer>
+  © 2026 Etsy Danışmanlık – Tüm Hakları Saklıdır
+</footer>
 
 </body>
 </html>
