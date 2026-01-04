@@ -260,3 +260,37 @@ body {
   .sub { font-size: 16px; }
   .section-head h2 { font-size: 24px; }
 }
+.faq {
+  background: #ffffff;
+  padding: 90px 0;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.faq .sub {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 50px;
+}
+
+.faq-item {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  background: #f4f7fb;
+  padding: 25px 30px;
+  border-radius: 16px;
+}
+
+.faq-item h3 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.faq-item p {
+  color: #374151;
+  line-height: 1.6;
+}
